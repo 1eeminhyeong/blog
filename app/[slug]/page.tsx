@@ -10,6 +10,7 @@ import rehypePrettyCode from "rehype-pretty-code"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeSlug from "rehype-slug"
 import "./markdown.css"
+import { Utterances } from "../components/utterances"
 
 type PromiseParams = { params: Promise<{ slug: string }> }
 
@@ -62,7 +63,7 @@ export default async function PostPage({ params }: PromiseParams) {
         />
       </div>
 
-
+      <Utterances />
     </article>
   )
 }

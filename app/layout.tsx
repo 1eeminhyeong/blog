@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { serif } from "./fonts"
 import Link from "next/link"
-import { HomeLink } from "./components/HomeLink"
+import { HomeLink } from "./components/home-link"
 
 export const metadata: Metadata = {
   title: "leveluper -- by Minhyeong",
