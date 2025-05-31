@@ -31,7 +31,6 @@ function PostTitle({ post }: { post: PostMatter }) {
         sans.className,
         "text-[28px] font-black leading-none mb-2",
         "bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent",
-        "dark:from-purple-500 dark:to-purple-300",
       ].join(" ")}
     >
       {post.title}

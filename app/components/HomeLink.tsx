@@ -14,8 +14,9 @@ export function HomeLink() {
       className={[sans.className, "inline-block text-2xl font-black", isActive ? "" : "hover:scale-[1.02]"].join(" ")}
     >
       <span
+        className="bg-gradient-to-r"
         style={{
-          "--myColor1": isActive ? "var(--text)" : "var(--pink)",
+          "--myColor1": isActive ? "var(--text)" : "var(--purple)",
           "--myColor2": isActive ? "var(--text)" : "var(--purple)",
           backgroundImage: "linear-gradient(45deg, var(--myColor1), var(--myColor2))",
           backgroundClip: "text",
