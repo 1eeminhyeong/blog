@@ -5,7 +5,7 @@ import Link from "next/link"
 import { HomeLink } from "./components/HomeLink"
 
 export const metadata: Metadata = {
-  title: "leveluper",
+  title: "leveluper -- by Minhyeong",
   description: "Personal Blog",
 }
 

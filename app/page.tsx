@@ -42,7 +42,7 @@ function PostTitle({ post }: { post: PostMatter }) {
 function PostMeta({ post }: { post: PostMatter }) {
   return (
     <p className="text-[13px] text-gray-700 dark:text-gray-300">
-      {new Date(post.date).toLocaleDateString("en", {
+      {new Date(post.date).toLocaleDateString("ko", {
         day: "numeric",
         month: "long",
         year: "numeric",
