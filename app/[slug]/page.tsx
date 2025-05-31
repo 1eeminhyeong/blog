@@ -11,7 +11,9 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeSlug from "rehype-slug"
 import "./markdown.css"
 
-export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+type PromiseParams = { params: Promise<{ slug: string }> }
+
+export default async function PostPage({ params }: PromiseParams) {
   const { slug } = await params
   const filename = "./public/" + slug + "/index.md"
 
@@ -63,4 +65,14 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
     </article>
   )
+}
+
+export async function generateMetadata({ params }: PromiseParams) {
+  const { slug } = await params;
+  const file = await readFile("./public/" + slug + "/index.md", "utf8");
+  const { data } = matter(file);
+  return {
+    title: data.title,
+    description: data.spoiler,
+  };
 }
